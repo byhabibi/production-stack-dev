@@ -1,4 +1,6 @@
 # SSL cert (rahasia)
+# SSL & Certbot
+infra/proxy/certbot/
 infra/proxy/certbot/conf/live/
 infra/proxy/certbot/conf/archive/
 infra/proxy/certbot/conf/accounts/

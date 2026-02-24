@@ -14,6 +14,15 @@ services:
     restart: always
     ports:
       - "3001:3000"
+#    environment:
+#      - GF_SERVER_ROOT=https://monitoring.bybi.web.id
+#      - GF_SECURITY_ALLOW_EMBEDDING=true
+#      - GF_SECURITY_COOCKIE_SAMESITE=none
+#      - GF_SECURITY_COOKIE_SECURE=true
+#      - GF_SERVER_DOMAIN=https://monitoring.bybi.web.id
+#      - GF_SERVER-SERVE_FROM_SUB_PATH=false
+    volumes:
+        - ./grafana/grafana.ini:/etc/grafa/grafana.ini
     networks:
       - web
 
