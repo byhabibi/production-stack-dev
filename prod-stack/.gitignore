@@ -1,0 +1,11 @@
+# SSL cert (rahasia)
+infra/proxy/certbot/conf/live/
+infra/proxy/certbot/conf/archive/
+infra/proxy/certbot/conf/accounts/
+
+# env
+.env
+
+# docker volume data
+**/pgdata
+**/grafana-data
