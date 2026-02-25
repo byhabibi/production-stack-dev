@@ -1,4 +1,4 @@
-servces:
+services:
   backend:
     build: ./backend
     container_name: backend-app
@@ -9,11 +9,11 @@ servces:
       - DB_USER=dba
       - DB_PASSWORD=dba123
     depends_on:
-      - db
+      - postgres
     networks:
       - web
 
-    frontend:
+  frontend:
       build: ./frontend
       container_name: frontend_app
       restart: always
@@ -21,7 +21,7 @@ servces:
       networks:
         - web
 
-    postgres:
+  postgres:
       image: postgres:15
       container_name: db-app
       restart: always
@@ -31,7 +31,7 @@ servces:
         - POSTGRES_DB=lab_db
 
       volumes:
-        - db_data: /var/lib/postgresql/data
+        - db_data:/var/lib/postgresql/data
       networks:
          - web
 
@@ -40,4 +40,4 @@ networks:
     external: true
 
 volumes:
-  db_data
+  db_data:
