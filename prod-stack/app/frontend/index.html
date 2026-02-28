@@ -1,75 +1,58 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab Learning - BYBI</title>
-    <style>
-        :root {
-            --primary: #2563eb; /* Blue DevOps */
-            --bg: #0f172a;      /* Dark Slate */
-            --text: #f8fafc;
-        }
-        body {
-            font-family: 'Monaco', 'Consolas', monospace;
-            background-color: var(--bg);
-            color: var(--text);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-        }
-        .container {
-            border: 1px solid #334155;
-            padding: 3rem;
-            border-radius: 8px;
-            background: #1e293b;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-            text-align: center;
-            position: relative;
-        }
-        .lab-status {
-            color: #10b981; /* Green */
-            font-size: 0.8rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-        h1 {
-            font-size: 2.2rem;
-            margin: 0;
-            color: var(--text);
-            letter-spacing: -1px;
-        }
-        .subtitle {
-            font-size: 1.1rem;
-            color: #94a3b8;
-            margin-top: 10px;
-        }
-        .terminal-text {
-            margin-top: 2rem;
-            font-size: 0.9rem;
-            color: #64748b;
-        }
-        .cursor {
-            border-right: 8px solid var(--primary);
-            animation: blink 1s infinite;
-        }
-        @keyframes blink { 50% { border-color: transparent; } }
-    </style>
+<title>DevOps Lab | BYBI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+background:#0f172a;
+color:#e2e8f0;
+font-family:monospace;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.box{
+background:#1e293b;
+padding:40px;
+border-radius:12px;
+width:600px;
+box-shadow:0 0 30px rgba(0,0,0,0.5);
+}
+
+.green{color:#22c55e;}
+.blue{color:#38bdf8;}
+.gray{color:#94a3b8;}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <span class="lab-status">● SYSTEM ACTIVE</span>
-        <h1>Lab Learning for Trial Session</h1>
-        <p class="subtitle">DevOps Learn Laboratory <span class="cursor"></span></p>
-        
-        <div class="terminal-text">
-            $ docker-compose up --build <br>
-            [infra/proxy] OK <br>
-            [app/backend] CONNECTED
-        </div>
-    </div>
+
+<div class="box">
+<p class="green">● SYSTEM ACTIVE</p>
+
+<h2>DevOps Learning Lab</h2>
+
+<p class="gray">
+$ docker compose up --build<br>
+[infra/proxy] OK<br>
+[frontend] RUNNING<br>
+[backend] RUNNING<br>
+[postgres] RUNNING<br>
+[prometheus] RUNNING<br>
+[grafana] RUNNING
+</p>
+
+<p class="blue">
+Environment: Sandbox / Testing<br>
+Purpose: CI/CD experiments, monitoring tests, container orchestration.
+</p>
+
+</div>
+
 </body>
 </html>
