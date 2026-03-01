@@ -18,7 +18,7 @@ Nginx Reverse Proxy
 ⬇  
 Dockerized Services (Multi-Container)  
 ⬇  
-Database (MySQL)  
+Database (Postgres)  
 ⬇  
 Monitoring Stack (Prometheus + Grafana)
 
