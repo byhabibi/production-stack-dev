@@ -1,11 +1,11 @@
 services:
   backend:
     build: ./backend
-    container_name: backend-app
+    container_name: backend
     restart: always
 
     environment:
-      - DB_HOST:=db
+      - DB_HOST=postgres
       - DB_USER=dba
       - DB_PASSWORD=dba123
     depends_on:
@@ -14,25 +14,24 @@ services:
       - web
 
   frontend:
-      build: ./frontend
-      container_name: frontend_app
-      restart: always
-
-      networks:
-        - web
+    build: ./frontend
+    container_name: frontend
+    restart: always
+    networks:
+       - web
 
   postgres:
-      image: postgres:15
-      container_name: db-app
-      restart: always
-      environment:
+    image: postgres:15
+    container_name: db
+    restart: always
+    environment:
         - POSTGRES_USER=admin
         - POSTGRES_PASSWORD=admin123
         - POSTGRES_DB=lab_db
 
-      volumes:
+    volumes:
         - db_data:/var/lib/postgresql/data
-      networks:
+    networks:
          - web
 
 networks:
