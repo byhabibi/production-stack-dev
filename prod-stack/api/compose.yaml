@@ -1,6 +1,6 @@
 services:
-  api:
-    image: python:3.10-slim
+  backend:
+    build: .
     container_name: api
     restart: always
     networks:
