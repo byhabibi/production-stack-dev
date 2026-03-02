@@ -11,3 +11,6 @@ infra/proxy/certbot/conf/accounts/
 # docker volume data
 **/pgdata
 **/grafana-data
+
+echo "*.save" >> .gitignore
+echo "*.swp" >> .gitignore
