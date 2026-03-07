@@ -20,4 +20,5 @@ jobs:
             echo "Connected to VPS"
             cd /home/devops/prod-stack
             git pull origin main
+            docker compose up -d --build
             echo "Deploy finished"
