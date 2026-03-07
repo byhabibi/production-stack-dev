@@ -1,0 +1,11 @@
+services:
+  backend:
+    build: .
+    container_name: api
+    restart: always
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
