@@ -33,6 +33,7 @@ Monitoring Stack (Prometheus + Grafana)
 - Postgres (Database)
 - Prometheus
 - Grafana
+- CI/CD Github Actions
 
 ---
 
