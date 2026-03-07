@@ -21,6 +21,19 @@ jobs:
               cd /home/devops/prod-stack
               git pull origin main
               docker compose build --no-cache
-              docker compose up -d
+
+              cd /home/devops/prod-stack/app
+              docker compose down
+              docker compose up -d --build
+              echo "Rebuild Compose App"
+
+              cd /home/devops/prod-stack/api
+              docker compose down
+              docker compose up -d --build
+              echo "Rebuild Compose API"
+
+              cd /home/devops/prod-stack/infra
               docker restart nginx
+              echo "Restart Nginx"
+              
               echo "Deploy finished"
