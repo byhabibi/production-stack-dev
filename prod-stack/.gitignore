@@ -14,3 +14,11 @@ infra/proxy/certbot/conf/accounts/
 
 echo "*.save" >> .gitignore
 echo "*.swp" >> .gitignore
+.cache/
+.local/
+.docker/
+.ssh/
+__pycache__/
+*.pyc
+node_modules/
+.env
